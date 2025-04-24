@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import md from "unplugin-vue-markdown/vite";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
@@ -13,5 +15,8 @@ export default defineConfig({
   ],
   build: {
     target: "es2022",
+  },
+  test: {
+	include: ['**/*.test.js']
   },
 });
